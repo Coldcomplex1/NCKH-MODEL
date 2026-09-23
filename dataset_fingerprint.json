@@ -1,0 +1,17 @@
+{
+  "dataset_id": "nguyendv02/ViMD_Dataset",
+  "revision": "3a5b30157034e7eadd5c75fae1a820c6f9383398",
+  "sampling_rate": 16000,
+  "shard_format": 2,
+  "utterances": {
+    "train": 15023,
+    "valid": 1900,
+    "test": 2026
+  },
+  "train_used": 15022,
+  "text_digest": {
+    "train": "134d33790099779f",
+    "valid": "211b74089016a53a",
+    "test": "0c0f84cce9d6bc1c"
+  }
+}

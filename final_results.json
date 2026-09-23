@@ -1,0 +1,467 @@
+{
+  "model": "vinai/PhoWhisper-large",
+  "dataset": "nguyendv02/ViMD_Dataset",
+  "dataset_revision": "3a5b30157034e7eadd5c75fae1a820c6f9383398",
+  "model_revision": "b9136a44b5f2ca664bd0b8f74baecf1715f6eeeb",
+  "recipe": {
+    "model_id": "vinai/PhoWhisper-large",
+    "model_revision": "b9136a44b5f2ca664bd0b8f74baecf1715f6eeeb",
+    "dataset": {
+      "dataset_id": "nguyendv02/ViMD_Dataset",
+      "revision": "3a5b30157034e7eadd5c75fae1a820c6f9383398",
+      "sampling_rate": 16000,
+      "shard_format": 2,
+      "utterances": {
+        "train": 15023,
+        "valid": 1900,
+        "test": 2026
+      },
+      "train_used": 15022,
+      "text_digest": {
+        "train": "134d33790099779f",
+        "valid": "211b74089016a53a",
+        "test": "0c0f84cce9d6bc1c"
+      }
+    },
+    "language": "vi",
+    "task": "transcribe",
+    "expand_numbers": true,
+    "learning_rate": 5e-06,
+    "lr_scheduler_type": "linear",
+    "warmup_steps": 500,
+    "num_train_epochs": 20.0,
+    "effective_batch_size": 64,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "apply_spec_augment": true,
+    "mask_time_prob": 0.05,
+    "mask_time_length": 10,
+    "mask_feature_prob": 0.0,
+    "mask_feature_length": 10,
+    "eval_steps": 250,
+    "early_stopping_patience": 5,
+    "early_stopping_threshold": 0.0005,
+    "final_num_beams": 5,
+    "max_label_tokens": 448,
+    "seed": 42,
+    "pipeline_version": 1
+  },
+  "selected_checkpoint": "/home/aiotuser/NCKH/outputs/checkpoints/checkpoint-1750",
+  "validation": {
+    "wer_normalized": 0.08314647983977147,
+    "wer_raw": 0.13031401158985328,
+    "cer_normalized": 0.06194132403066756,
+    "num_utterances": 1900,
+    "num_skipped_empty_references": 0,
+    "num_beams": 5,
+    "best_greedy_wer_normalized_during_training": 0.08404816431404154
+  },
+  "test": {
+    "wer_normalized": 0.07844676610906455,
+    "wer_raw": 0.1260512448853256,
+    "cer_normalized": 0.05868100864045142,
+    "num_utterances": 2026,
+    "num_skipped_empty_references": 0,
+    "num_beams": 5,
+    "wer_by_region": {
+      "Central": {
+        "wer_norm": 0.10425451331902537,
+        "num_utterances": 623
+      },
+      "North": {
+        "wer_norm": 0.061675366450295664,
+        "num_utterances": 783
+      },
+      "South": {
+        "wer_norm": 0.07474969474969476,
+        "num_utterances": 620
+      }
+    },
+    "wer_by_province": {
+      "AnGiang": {
+        "wer_norm": 0.07189873417721519,
+        "num_utterances": 31
+      },
+      "BaRiaVungTau": {
+        "wer_norm": 0.09408983451536643,
+        "num_utterances": 31
+      },
+      "BacGiang": {
+        "wer_norm": 0.05764145954521417,
+        "num_utterances": 28
+      },
+      "BacKan": {
+        "wer_norm": 0.05340963280877444,
+        "num_utterances": 34
+      },
+      "BacLieu": {
+        "wer_norm": 0.08754623921085081,
+        "num_utterances": 33
+      },
+      "BacNinh": {
+        "wer_norm": 0.05986261040235525,
+        "num_utterances": 29
+      },
+      "BenTre": {
+        "wer_norm": 0.0778414517669532,
+        "num_utterances": 31
+      },
+      "BinhDinh": {
+        "wer_norm": 0.12842012356575463,
+        "num_utterances": 28
+      },
+      "BinhDuong": {
+        "wer_norm": 0.06478624944909651,
+        "num_utterances": 33
+      },
+      "BinhPhuoc": {
+        "wer_norm": 0.08131693772312575,
+        "num_utterances": 35
+      },
+      "BinhThuan": {
+        "wer_norm": 0.1170534813319879,
+        "num_utterances": 33
+      },
+      "CaMau": {
+        "wer_norm": 0.08087891538101917,
+        "num_utterances": 37
+      },
+      "CanTho": {
+        "wer_norm": 0.07122982749026155,
+        "num_utterances": 28
+      },
+      "CaoBang": {
+        "wer_norm": 0.06787540678754068,
+        "num_utterances": 35
+      },
+      "DaNang": {
+        "wer_norm": 0.08367439745338791,
+        "num_utterances": 33
+      },
+      "DakLak": {
+        "wer_norm": 0.08982035928143713,
+        "num_utterances": 34
+      },
+      "DakNong": {
+        "wer_norm": 0.06211764705882353,
+        "num_utterances": 31
+      },
+      "DienBien": {
+        "wer_norm": 0.06338742393509128,
+        "num_utterances": 28
+      },
+      "DongNai": {
+        "wer_norm": 0.06476449275362318,
+        "num_utterances": 31
+      },
+      "DongThap": {
+        "wer_norm": 0.0763254113345521,
+        "num_utterances": 28
+      },
+      "GiaLai": {
+        "wer_norm": 0.14602409638554217,
+        "num_utterances": 33
+      },
+      "HaGiang": {
+        "wer_norm": 0.0854126679462572,
+        "num_utterances": 33
+      },
+      "HaNam": {
+        "wer_norm": 0.06801275239107332,
+        "num_utterances": 27
+      },
+      "HaNoi": {
+        "wer_norm": 0.05352913311226907,
+        "num_utterances": 29
+      },
+      "HaTinh": {
+        "wer_norm": 0.1292580494633691,
+        "num_utterances": 33
+      },
+      "HaiDuong": {
+        "wer_norm": 0.051121076233183856,
+        "num_utterances": 30
+      },
+      "HaiPhong": {
+        "wer_norm": 0.05608695652173913,
+        "num_utterances": 33
+      },
+      "HauGiang": {
+        "wer_norm": 0.054801670146137786,
+        "num_utterances": 30
+      },
+      "HoChiMinh": {
+        "wer_norm": 0.05748135146994296,
+        "num_utterances": 34
+      },
+      "HoaBinh": {
+        "wer_norm": 0.0689149560117302,
+        "num_utterances": 32
+      },
+      "HungYen": {
+        "wer_norm": 0.11978131212723658,
+        "num_utterances": 30
+      },
+      "KhanhHoa": {
+        "wer_norm": 0.06323529411764706,
+        "num_utterances": 30
+      },
+      "KienGiang": {
+        "wer_norm": 0.06175889328063241,
+        "num_utterances": 32
+      },
+      "KonTum": {
+        "wer_norm": 0.10737852429514097,
+        "num_utterances": 31
+      },
+      "LaiChau": {
+        "wer_norm": 0.06840551181102363,
+        "num_utterances": 27
+      },
+      "LamDong": {
+        "wer_norm": 0.08868360277136259,
+        "num_utterances": 33
+      },
+      "LangSon": {
+        "wer_norm": 0.06472654290015052,
+        "num_utterances": 33
+      },
+      "LaoCai": {
+        "wer_norm": 0.0487152034261242,
+        "num_utterances": 38
+      },
+      "LongAn": {
+        "wer_norm": 0.07366707366707367,
+        "num_utterances": 38
+      },
+      "NamDinh": {
+        "wer_norm": 0.03939796370075255,
+        "num_utterances": 31
+      },
+      "NgheAn": {
+        "wer_norm": 0.07541478129713423,
+        "num_utterances": 43
+      },
+      "NinhBinh": {
+        "wer_norm": 0.06053709604005462,
+        "num_utterances": 26
+      },
+      "NinhThuan": {
+        "wer_norm": 0.06821705426356589,
+        "num_utterances": 34
+      },
+      "PhuTho": {
+        "wer_norm": 0.04936014625228519,
+        "num_utterances": 32
+      },
+      "PhuYen": {
+        "wer_norm": 0.12058111380145278,
+        "num_utterances": 32
+      },
+      "QuangBinh": {
+        "wer_norm": 0.18502377179080823,
+        "num_utterances": 36
+      },
+      "QuangNam": {
+        "wer_norm": 0.07822308063737325,
+        "num_utterances": 30
+      },
+      "QuangNgai": {
+        "wer_norm": 0.16505791505791506,
+        "num_utterances": 38
+      },
+      "QuangNinh": {
+        "wer_norm": 0.05997074597757192,
+        "num_utterances": 34
+      },
+      "QuangTri": {
+        "wer_norm": 0.07543959160521838,
+        "num_utterances": 30
+      },
+      "SocTrang": {
+        "wer_norm": 0.11758530183727034,
+        "num_utterances": 31
+      },
+      "SonLa": {
+        "wer_norm": 0.03696303696303696,
+        "num_utterances": 35
+      },
+      "TayNinh": {
+        "wer_norm": 0.06951620479098168,
+        "num_utterances": 34
+      },
+      "ThaiBinh": {
+        "wer_norm": 0.07006369426751592,
+        "num_utterances": 33
+      },
+      "ThaiNguyen": {
+        "wer_norm": 0.06425511661113756,
+        "num_utterances": 31
+      },
+      "ThanhHoa": {
+        "wer_norm": 0.06694560669456066,
+        "num_utterances": 29
+      },
+      "ThuaThienHue": {
+        "wer_norm": 0.11156812339331619,
+        "num_utterances": 32
+      },
+      "TienGiang": {
+        "wer_norm": 0.07438400743840075,
+        "num_utterances": 33
+      },
+      "TraVinh": {
+        "wer_norm": 0.06219673577415086,
+        "num_utterances": 40
+      },
+      "TuyenQuang": {
+        "wer_norm": 0.04875670404680644,
+        "num_utterances": 34
+      },
+      "VinhLong": {
+        "wer_norm": 0.07969275084013443,
+        "num_utterances": 30
+      },
+      "VinhPhuc": {
+        "wer_norm": 0.07949587978671838,
+        "num_utterances": 28
+      },
+      "YenBai": {
+        "wer_norm": 0.05,
+        "num_utterances": 33
+      }
+    }
+  },
+  "checkpoint_reranking": [
+    {
+      "checkpoint": "/home/aiotuser/NCKH/outputs/checkpoints/checkpoint-2250",
+      "valid_wer_norm": 0.08356939379673,
+      "valid_wer_raw": 0.13103239092607077,
+      "valid_cer_norm": 0.062164468998655555
+    },
+    {
+      "checkpoint": "/home/aiotuser/NCKH/outputs/checkpoints/checkpoint-1750",
+      "valid_wer_norm": 0.08314647983977147,
+      "valid_wer_raw": 0.13031401158985328,
+      "valid_cer_norm": 0.06194132403066756
+    },
+    {
+      "checkpoint": "/home/aiotuser/NCKH/outputs/checkpoints/checkpoint-2000",
+      "valid_wer_norm": 0.08491793075382419,
+      "valid_wer_raw": 0.13246116760588114,
+      "valid_cer_norm": 0.06360933266637782
+    }
+  ],
+  "splits": {
+    "train": {
+      "num_utterances": 15023,
+      "hours": 81.429,
+      "min_duration_s": 1.054,
+      "max_duration_s": 35.284,
+      "num_utterances_over_30s_truncated_by_whisper": 445,
+      "num_speakers": 10291,
+      "num_provinces": 63
+    },
+    "valid": {
+      "num_utterances": 1900,
+      "hours": 10.262,
+      "min_duration_s": 1.301,
+      "max_duration_s": 31.834,
+      "num_utterances_over_30s_truncated_by_whisper": 61,
+      "num_speakers": 1320,
+      "num_provinces": 63
+    },
+    "test": {
+      "num_utterances": 2026,
+      "hours": 10.872,
+      "min_duration_s": 2.536,
+      "max_duration_s": 32.033,
+      "num_utterances_over_30s_truncated_by_whisper": 64,
+      "num_speakers": 1344,
+      "num_provinces": 63
+    }
+  },
+  "training": {
+    "num_train_utterances_used": 15022,
+    "num_train_utterances_dropped": 1,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 32,
+    "effective_batch_size": 64,
+    "train_eval_generation_max_length": 448,
+    "final_generation_max_length": 448
+  },
+  "normalization": {
+    "raw_wer": "Unicode NFC plus whitespace collapsing only",
+    "normalized_wer": [
+      "Unicode NFC",
+      "lowercase (diacritics preserved)",
+      "canonical Vietnamese tone placement (hoà = hòa, thuý = thúy)",
+      "% expanded to 'phan tram'",
+      "digit sequences expanded to Vietnamese number words",
+      "punctuation and symbols replaced by spaces",
+      "whitespace collapsed"
+    ]
+  },
+  "config": {
+    "model_id": "vinai/PhoWhisper-large",
+    "dataset_id": "nguyendv02/ViMD_Dataset",
+    "dataset_revision": "",
+    "model_revision": "",
+    "language": "vi",
+    "task": "transcribe",
+    "sampling_rate": 16000,
+    "learning_rate": 5e-06,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "warmup_steps": 500,
+    "num_train_epochs": 20.0,
+    "train_batch_size": 16,
+    "grad_accum": 4,
+    "eval_batch_size": 16,
+    "beam_batch_size": 16,
+    "lr_scheduler_type": "linear",
+    "seed": 42,
+    "eval_steps": 250,
+    "logging_steps": 25,
+    "save_total_limit": 3,
+    "early_stopping_patience": 5,
+    "early_stopping_threshold": 0.0005,
+    "final_num_beams": 5,
+    "apply_spec_augment": true,
+    "mask_time_prob": 0.05,
+    "mask_time_length": 10,
+    "mask_feature_prob": 0.0,
+    "mask_feature_length": 10,
+    "dataloader_workers": 8,
+    "download_retries": 5,
+    "prepare_sweeps": 3,
+    "oom_retries": 3,
+    "min_free_gb": 100.0,
+    "recommended_free_gb": 200.0,
+    "expand_numbers": true,
+    "keep_raw_parquet": false,
+    "allow_incomplete_train": false,
+    "min_vram_gb": 70.0,
+    "min_ram_gb": 24.0,
+    "data_dir": "/home/aiotuser/NCKH/data/vimd_16k",
+    "raw_dir": "/home/aiotuser/NCKH/data/_raw_parquet",
+    "output_dir": "/home/aiotuser/NCKH/outputs",
+    "max_label_tokens": 448,
+    "max_audio_seconds": 30.0
+  },
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Linux-5.15.0-177-generic-x86_64-with-glibc2.35",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.51.3",
+    "cuda": "12.1",
+    "cudnn": 90100,
+    "gpu": "NVIDIA A40",
+    "gpu_total_vram_gb": 44.4,
+    "bf16_supported": true,
+    "tf32_available": true,
+    "compute_capability": "8.6",
+    "free_disk_gb": 1369.8,
+    "hf_home": "/home/aiotuser/NCKH/.hf_cache"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "model_id": "vinai/PhoWhisper-large",
+  "model_revision": "b9136a44b5f2ca664bd0b8f74baecf1715f6eeeb",
+  "dataset": {
+    "dataset_id": "nguyendv02/ViMD_Dataset",
+    "revision": "3a5b30157034e7eadd5c75fae1a820c6f9383398",
+    "sampling_rate": 16000,
+    "shard_format": 2,
+    "utterances": {
+      "train": 15023,
+      "valid": 1900,
+      "test": 2026
+    },
+    "train_used": 15022,
+    "text_digest": {
+      "train": "134d33790099779f",
+      "valid": "211b74089016a53a",
+      "test": "0c0f84cce9d6bc1c"
+    }
+  },
+  "language": "vi",
+  "task": "transcribe",
+  "expand_numbers": true,
+  "learning_rate": 5e-06,
+  "lr_scheduler_type": "linear",
+  "warmup_steps": 500,
+  "num_train_epochs": 20.0,
+  "effective_batch_size": 64,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "apply_spec_augment": true,
+  "mask_time_prob": 0.05,
+  "mask_time_length": 10,
+  "mask_feature_prob": 0.0,
+  "mask_feature_length": 10,
+  "eval_steps": 250,
+  "early_stopping_patience": 5,
+  "early_stopping_threshold": 0.0005,
+  "final_num_beams": 5,
+  "max_label_tokens": 448,
+  "seed": 42,
+  "pipeline_version": 1
+}
